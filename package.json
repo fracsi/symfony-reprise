@@ -17,6 +17,7 @@
     "build": "pnpm -C assets run build",
     "dev": "pnpm -C assets run dev",
     "typecheck": "pnpm -C assets run typecheck",
+    "typecheck:dist": "pnpm -C assets run typecheck:dist",
     "test": "pnpm -C assets run test",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
