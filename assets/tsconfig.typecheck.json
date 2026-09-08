@@ -8,5 +8,8 @@
         "moduleResolution": "bundler",
         "lib": ["es2024", "esnext.array", "esnext.collection", "es2025.iterator", "dom", "dom.iterable"],
         "noEmit": true
-    }
+    },
+    // Checked separately by `typecheck:dist`: it consumes the built `dist/*.d.mts` under `nodenext`,
+    // the way a published consumer does.
+    "exclude": ["dist", "test/fixtures/dist-types"]
 }

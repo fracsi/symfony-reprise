@@ -1,4 +1,4 @@
-import type { UnpluginFactory } from 'unplugin';
+import type { UnpluginFactory, UnpluginInstance } from 'unplugin';
 import type { RspackStats } from './collectors/rspack';
 import type { CopyResult } from './core/copy';
 import type { BuildContext, ManifestJson, NormalizedGraph, Options } from './types';
@@ -320,6 +320,8 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (options, _
     };
 };
 
-export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory);
+export const unplugin: UnpluginInstance<Options | undefined> = /* #__PURE__ */ createUnplugin<Options | undefined>(
+    unpluginFactory
+);
 
 export default unplugin;

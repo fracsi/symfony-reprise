@@ -42,6 +42,8 @@ jobs:
               run: pnpm run fmt:check
             - name: Typecheck
               run: pnpm run typecheck
+            - name: Typecheck built declarations
+              run: pnpm run typecheck:dist
 
     test:
         name: Node ${{ matrix.node-version }} on ${{ matrix.os }}
